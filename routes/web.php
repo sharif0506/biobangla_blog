@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hello', function(){
+    return "Welcome to biobangla blog";
+});
+
+Route::get('/login', 'UserAuthenticationController@index');
+Route::post('/login', 'UserAuthenticationController@attemptLogin');
+
+Route::get('/logout', 'UserAuthenticationController@logout');
+
+Route::get('/home', 'BlogController@index');
