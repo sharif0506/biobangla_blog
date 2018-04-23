@@ -19,6 +19,8 @@ class UserAuthenticationController extends Controller {
         $email = $request->email;
         $password = $request->password;
 
+        // dd(bcrypt($password));
+
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required'
@@ -35,6 +37,7 @@ class UserAuthenticationController extends Controller {
 
     public function logout(Request $request) {
         $request->session()->flush();
+        Auth::logout();
         return redirect('login');
     }
 
