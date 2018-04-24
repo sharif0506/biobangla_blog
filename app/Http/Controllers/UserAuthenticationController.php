@@ -25,7 +25,7 @@ class UserAuthenticationController extends Controller {
             'email' => 'required|email',
             'password' => 'required'
         ]);
-        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+        if (Auth::attempt(['email' => $email, 'password' => $password])) {                        
             $encodedEmail = bcrypt($email);
             $encodedPassword = bcrypt($password);
             $value = $encodedEmail . $encodedPassword;

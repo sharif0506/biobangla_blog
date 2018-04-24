@@ -1,21 +1,10 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', function(){
+Route::get('/hello', function() {
     return "Welcome to biobangla blog";
 });
 
@@ -25,3 +14,26 @@ Route::post('/login', 'UserAuthenticationController@attemptLogin');
 Route::get('/logout', 'UserAuthenticationController@logout');
 
 Route::get('/home', 'BlogController@index');
+
+Route::get('/blog', 'BlogController@index');
+Route::get('/blog/{id}', 'BlogController@show');
+
+// admin user authentication
+Route::get('/admin/login', 'BlogController@show');
+Route::post('/admin/login', 'BlogController@show');         //middleware from this
+Route::get('/admin/logout', 'BlogController@show');
+
+// admin user profile
+Route::get('/admin/profile', 'Controller@method');
+Route::post('/admin/profile', 'Controller@method');
+
+//user creation
+Route::get('/admin/user/add', 'Controller@method');
+Route::post('/admin/user/add', 'Controller@method');
+
+// blog operation
+Route::get('/admin/blog/add', 'Controller@method');
+Route::get('/admin/blog/add', 'Controller@method');
+Route::get('/admin/blog/edit', 'Controller@method');
+Route::post('/admin/blog/edit', 'Controller@method');
+Route::post('/admin/blog/delete', 'Controller@method');
