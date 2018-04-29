@@ -3,7 +3,7 @@
 
 @section('content')
 <h1>Welcome to biobangla blog</h1>
-<p>This is home page</p>
+<p>This is projects page</p>
 <a href="{{ url('/logout') }}" >Logout</a>
 @endsection
 

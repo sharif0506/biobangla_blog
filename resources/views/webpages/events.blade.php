@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title','Upcoming Events')
+@section('title','Our Events')
 
 @section('content')
 <h1>Welcome to biobangla blog</h1>
