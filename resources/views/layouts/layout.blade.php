@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <head>
     <title>@yield('title')</title>
-    <!--    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-        <script src="{{asset('js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('js/jquery.min.js')}}"></script>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -12,7 +9,7 @@
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-        
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
@@ -20,18 +17,15 @@
                     <span class="icon-bar"></span>                        
                 </button>
                 <a class="navbar-brand" href="{{ url('/') }}" >
-                    <img style="max-width:60px; margin-top: -10px;" src="{{asset('images/biobanglalogo1.jpg')}}" />
+                    <img style="max-width:60px; margin-top: -24px;" src="{{asset('images/biobangla-logo.jpg')}}" />
                 </a>
-             
-                <a class="navbar-brand" href="{{ url('/') }}">BioBangla</a>
-                <!-- <a class="navbar-left"  href="{{ url('/') }}"><img  src="{{asset('images/biobanglalogo1.jpg')}}"  style="max-height:45px; max-width:75px" /></a> -->
-                </div>
+            </div>
             <div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ url('events') }}">Events</a></li>
-                        <li><a href="{{ url('projects') }}">Projects</a></li>
+                        <!--<li><a href="{{ url('projects') }}">Projects</a></li>-->
                         <li><a href="{{ url('partnarship') }}">Partnarship</a></li>
                         <li><a href="{{ url('about') }}"> About</a></li>
                         <li><a href="{{ url('team') }}">Team</a></li>
@@ -44,14 +38,19 @@
         </div>
     </nav>
 
+    <br /> <br /> 
 
     <div class="container">
-        <div>
-            <h3 align='center' >BioBangla Blog </h3>
-            <hr />
-        </div>
         @yield('content') 
     </div>
+
+    <footer class="container-fluid text-center navbar-fixed-bottom" style="background-color: whitesmoke">
+        <div style="margin-top:25px;">
+            <p>
+                BioBangla © 2018, All Rights Reserved
+            </p>                           
+        </div>
+    </footer>    
 
 </body>
 
