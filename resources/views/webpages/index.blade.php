@@ -44,7 +44,7 @@
 
         <img class="img-responsive" src="{{asset('images/home-workshop.jpg')}}" alt="Home Banner" style="width: 100%;margin-top:10px;margin-bottom: 10px" />
     </div>
-    
+
     <div class="row">
         <p class="text-center" style="font-size: 18px; margin: 10px; padding: 10px; background-color: seagreen">
             SYNBIOBANGLADESH
